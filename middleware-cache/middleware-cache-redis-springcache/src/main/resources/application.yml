@@ -1,0 +1,16 @@
+spring:
+  cache:
+    host: 10.0.2.220
+    port: 6379
+#    password:
+    maxIdle: 3
+    maxTotal: 200
+    annotationCacheTime: 60
+#    l2:
+#      maxCacheCount: 10
+#      maxCacheMemory: 20
+logging:
+  level:
+    root: info
+#    com.fclassroom: trace
+    com.fclassroom: debug

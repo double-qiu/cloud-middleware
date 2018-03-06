@@ -1,0 +1,11 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: middleware-data-kafka-producer
+kafka:
+  broker-address: 127.0.0.1:9092
+management:
+  security:
+    enabled: false
+ 

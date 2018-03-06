@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: middleware-data-kafka-consumer
+kafka:
+  broker-address: 127.0.0.1:9092
+  group-id: consumer-dev-aaa--bb11111111
+management:
+  security:
+    enabled: false
+ 

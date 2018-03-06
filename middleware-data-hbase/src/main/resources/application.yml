@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: middleware-data-hbase
+hbase:
+  quorum: 127.0.0.1:2181
+management:
+  security:
+    enabled: false
+ 

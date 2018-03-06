@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.middleware.mybatis.dao.AstudentDao">
+    <sql id="astudentColumns">
+		t.id,
+		t.login_name,
+		t.salt,
+		t.password,
+		t.nickname,
+		t.real_name,
+		t.sex,
+		t.birthday,
+		t.phone,
+		t.email,
+		t.id_card,
+		t.source_from,
+		t.status,
+		t.student_code,
+		t.create_time,
+		t.update_time,
+		t.is_deleted as deleted
+	</sql>
+
+    <select id="findOne" resultType="Astudent">
+        SELECT
+        <include refid="astudentColumns"/>
+        FROM a_student t WHERE id = #{id}
+    </select>
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO a_student (
+			login_name, 
+			salt, 
+			password, 
+			nickname, 
+			real_name, 
+			sex, 
+			birthday, 
+			phone, 
+			email, 
+			id_card, 
+			source_from, 
+			status, 
+			student_code, 
+			create_time,
+			is_deleted
+		) VALUES (
+			#{loginName}, 
+			#{salt}, 
+			#{password}, 
+			#{nickname}, 
+			#{realName}, 
+			#{sex}, 
+			#{birthday}, 
+			#{phone}, 
+			#{email}, 
+			#{idCard}, 
+			#{sourceFrom}, 
+			#{status}, 
+			#{studentCode}, 
+			#{createTime},
+			#{deleted}
+		)
+	</insert>
+
+    <update id="update">
+		UPDATE a_student SET
+			login_name = #{loginName}, 
+			salt = #{salt}, 
+			password = #{password}, 
+			nickname = #{nickname}, 
+			real_name = #{realName}, 
+			sex = #{sex}, 
+			birthday = #{birthday}, 
+			phone = #{phone}, 
+			email = #{email}, 
+			id_card = #{idCard}, 
+			source_from = #{sourceFrom}, 
+			status = #{status}, 
+			student_code = #{studentCode}, 
+			create_time = #{createTime},
+			is_deleted = #{deleted}
+		WHERE id = #{id}
+	</update>
+
+    <delete id="delete">
+		UPDATE a_student SET is_deleted = 1 WHERE ID = #{id}
+	</delete>
+</mapper>
+

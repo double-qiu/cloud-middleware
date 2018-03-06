@@ -1,0 +1,10 @@
+spring:
+  cache:
+    host: 118.190.77.122
+    port: 6301
+    maxIdle: 3
+    maxTotal: 200
+    database: 1
+logging:
+  level:
+    root: debug

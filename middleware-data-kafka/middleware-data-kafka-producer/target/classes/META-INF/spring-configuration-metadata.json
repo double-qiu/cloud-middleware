@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.middleware.data.kafka.config.KafkaProducerProperties",
+      "name": "kafka",
+      "type": "com.middleware.data.kafka.config.KafkaProducerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.middleware.data.kafka.config.KafkaProducerProperties",
+      "name": "kafka.broker-address",
+      "type": "java.lang.String"
+    }
+  ]
+}

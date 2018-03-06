@@ -1,0 +1,22 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.middleware.data.kafka.consumer.config.KafkaConsumerProperties",
+      "name": "kafka",
+      "type": "com.middleware.data.kafka.consumer.config.KafkaConsumerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.middleware.data.kafka.consumer.config.KafkaConsumerProperties",
+      "name": "kafka.broker-address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.middleware.data.kafka.consumer.config.KafkaConsumerProperties",
+      "name": "kafka.group-id",
+      "type": "java.lang.String"
+    }
+  ]
+}

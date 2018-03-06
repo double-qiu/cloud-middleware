@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.middleware.mybatis.dao.AstudentDao">
+    <select id="findByRealNameAndNickname" resultType="Astudent">
+        SELECT
+        <include refid="astudentColumns"/>
+        FROM a_student t WHERE real_name = #{realName} and nickname = #{nickname}
+    </select>
+    <select id="findByRealNameAndNickname2" resultType="Astudent">
+        SELECT
+        <include refid="astudentColumns"/>
+        FROM a_student t WHERE real_name = #{realName} and nickname = #{nickname}
+    </select>
+
+    <select id="findAstudentByRealName" resultType="map">
+		SELECT id, real_name as realName, nickname FROM a_student t WHERE real_name = #{realName}
+	</select>
+
+    <select id="searchAstudent" resultType="map">
+        SELECT id, real_name as realName, nickname FROM a_student t WHERE 1 = 1
+        <if test="filter.realName">and real_name=#{filter.realName}</if>
+        <if test="filter.nickname">and nickname=#{filter.nickname}</if>
+    </select>
+</mapper>
+
